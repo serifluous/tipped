@@ -14,6 +14,10 @@
 		9A2871B21E1C7FA900CC5F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2871B01E1C7FA900CC5F51 /* LaunchScreen.storyboard */; };
 		9A2871BD1E1C7FA900CC5F51 /* tippedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2871BC1E1C7FA900CC5F51 /* tippedTests.swift */; };
 		9A2871C81E1C7FA900CC5F51 /* tippedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2871C71E1C7FA900CC5F51 /* tippedUITests.swift */; };
+		9AB3AC361E1DE1A9005D06BA /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB3AC321E1DE1A9005D06BA /* Raleway-Light.ttf */; };
+		9AB3AC371E1DE1A9005D06BA /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB3AC331E1DE1A9005D06BA /* Raleway-Medium.ttf */; };
+		9AB3AC381E1DE1A9005D06BA /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB3AC341E1DE1A9005D06BA /* Raleway-Regular.ttf */; };
+		9AB3AC391E1DE1A9005D06BA /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB3AC351E1DE1A9005D06BA /* Raleway-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		9A2871C31E1C7FA900CC5F51 /* tippedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2871C71E1C7FA900CC5F51 /* tippedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippedUITests.swift; sourceTree = "<group>"; };
 		9A2871C91E1C7FA900CC5F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB3AC321E1DE1A9005D06BA /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "Resources/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		9AB3AC331E1DE1A9005D06BA /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "Resources/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		9AB3AC341E1DE1A9005D06BA /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "Resources/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		9AB3AC351E1DE1A9005D06BA /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "Resources/Raleway-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		9A28719B1E1C7FA900CC5F51 = {
 			isa = PBXGroup;
 			children = (
+				9AB3AC311E1DE195005D06BA /* Resources */,
 				9A2871A61E1C7FA900CC5F51 /* tipped */,
 				9A2871BB1E1C7FA900CC5F51 /* tippedTests */,
 				9A2871C61E1C7FA900CC5F51 /* tippedUITests */,
@@ -123,6 +132,17 @@
 				9A2871C91E1C7FA900CC5F51 /* Info.plist */,
 			);
 			path = tippedUITests;
+			sourceTree = "<group>";
+		};
+		9AB3AC311E1DE195005D06BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9AB3AC321E1DE1A9005D06BA /* Raleway-Light.ttf */,
+				9AB3AC331E1DE1A9005D06BA /* Raleway-Medium.ttf */,
+				9AB3AC341E1DE1A9005D06BA /* Raleway-Regular.ttf */,
+				9AB3AC351E1DE1A9005D06BA /* Raleway-Thin.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2871B21E1C7FA900CC5F51 /* LaunchScreen.storyboard in Resources */,
+				9AB3AC381E1DE1A9005D06BA /* Raleway-Regular.ttf in Resources */,
 				9A2871AF1E1C7FA900CC5F51 /* Assets.xcassets in Resources */,
+				9AB3AC371E1DE1A9005D06BA /* Raleway-Medium.ttf in Resources */,
 				9A2871AD1E1C7FA900CC5F51 /* Main.storyboard in Resources */,
+				9AB3AC361E1DE1A9005D06BA /* Raleway-Light.ttf in Resources */,
+				9AB3AC391E1DE1A9005D06BA /* Raleway-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +527,7 @@
 				9A2871CE1E1C7FA900CC5F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A2871CF1E1C7FA900CC5F51 /* Build configuration list for PBXNativeTarget "tippedTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +536,7 @@
 				9A2871D11E1C7FA900CC5F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A2871D21E1C7FA900CC5F51 /* Build configuration list for PBXNativeTarget "tippedUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +545,7 @@
 				9A2871D41E1C7FA900CC5F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

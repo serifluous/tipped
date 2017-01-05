@@ -4,7 +4,7 @@ tipped is a tip calculator application for iOS.
 
 Submitted by: Sarah Li
 
-Time spent: 1 hours spent in total
+Time spent: 1.5 hours spent in total
 
 ## User Stories
 
@@ -12,15 +12,15 @@ The following **required** functionality is complete:
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] Custom font
+* [x] Custom font
 * [ ] UI animations
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- Keeps font size of bill total constant when text overflows
 
-## Video Walkthrough 
+## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
@@ -31,6 +31,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 - Had to change "Any" argument in calculateTip to "AnyObject" to be able to drag Value Changed event for the tipControl to the function
+- Used a tutorial (http://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/) to add custom font, but couldn't find an easy way to change the system font
 
 ## License
 
