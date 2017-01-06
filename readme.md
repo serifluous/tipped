@@ -4,7 +4,7 @@ tipped is a tip calculator application for iOS.
 
 Submitted by: Sarah Li
 
-Time spent: 1.5 hours spent in total
+Time spent: 2 hours spent in total
 
 ## User Stories
 
@@ -21,6 +21,7 @@ The following **additional** features are implemented:
 * [x] Keeps font size of bill total constant when text overflows
 * [ ] Split bill
 * [ ] App icon
+* [ ] Change height of UISegmentedControl
 
 ## Video Walkthrough
 
