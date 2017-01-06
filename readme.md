@@ -24,7 +24,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the current implementation:
 
 <a href="https://raw.githubusercontent.com/serifluous/tipped/master/Resources/tipped_recording.gif" target="_blank"><img src="https://raw.githubusercontent.com/serifluous/tipped/master/Resources/tipped_recording.gif" title="Video Walkthrough" width='' alt="tipped Video Walkthrough" /></a>
 
