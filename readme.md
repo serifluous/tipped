@@ -13,12 +13,14 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [x] Custom font
-* [ ] UI animations
+* [x] UI animations
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- Keeps font size of bill total constant when text overflows
+* [x] Keeps font size of bill total constant when text overflows
+* [ ] Split bill
+* [ ] App icon
 
 ## Video Walkthrough
 
@@ -32,6 +34,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 - Had to change "Any" argument in calculateTip to "AnyObject" to be able to drag Value Changed event for the tipControl to the function
 - Used a tutorial (http://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/) to add custom font, but couldn't find an easy way to change the system font
+- Found a way to replace the font for UISegmentedControl (http://stackoverflow.com/questions/27940042/how-to-change-font-size-and-font-name-of-uisegmentedcontrol-programmatically-on) and also fiddled with AppDelegate (http://stackoverflow.com/questions/34559989/swift-application-didfinishlaunchingwithoptions-method)
+- Used a tutorial (https://www.raywenderlich.com/113674/ios-animation-tutorial-getting-started) for animations
 
 ## License
 

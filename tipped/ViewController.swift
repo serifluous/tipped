@@ -10,15 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tipView: UIView!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var tipPlus: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalBg: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         billField.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        billField.center.y += 100
+        tipView.center.y += view.bounds.height
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +40,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onEdit(_ sender: Any) {
+        UIView.animate(withDuration: 0.8, animations: {
+            self.billField.center.y -= 100
+            self.tipView.center.y -= self.view.bounds.height
+        })
+    }
+    
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
