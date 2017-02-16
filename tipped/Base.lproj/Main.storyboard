@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
         <array key="Raleway-Regular.ttf">
             <string>Raleway-Regular</string>
         </array>
@@ -17,7 +20,7 @@
         <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipped" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tc" id="BYZ-38-t0r" customClass="ViewController" customModule="tipped" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,9 +63,35 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ZQ-ZR-wd6">
-                                        <rect key="frame" x="22" y="202" width="331" height="54"/>
+                                        <rect key="frame" x="22" y="172" width="331" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="48"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="#" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" id="bOe-T8-JCi">
+                                        <rect key="frame" x="128" y="271" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.1217975542" green="0.85929930210000005" blue="0.67148590090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.1217975542" green="0.85929930210000005" blue="0.67148590090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="6yk-v5-QT7"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Split the bill:             x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ih-Lp-hHp">
+                                        <rect key="frame" x="22" y="275" width="169" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L9v-bW-ulm">
+                                        <rect key="frame" x="180" y="257" width="173" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -73,9 +102,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter bill total" textAlignment="right" minimumFontSize="48" id="VOO-vl-0Tf">
                                 <rect key="frame" x="22" y="62" width="331" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1217975542" green="0.85929930210000005" blue="0.67148590090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.1217975542" green="0.85929930210000005" blue="0.67148590090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="zC4-bS-bzP"/>
                                     <action selector="onChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="D8p-YT-2TZ"/>
@@ -93,6 +123,9 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="Hzr-jH-Fx3"/>
                     <connections>
                         <outlet property="billField" destination="VOO-vl-0Tf" id="txX-PH-3TR"/>
+                        <outlet property="splitField" destination="bOe-T8-JCi" id="M0F-cq-qv5"/>
+                        <outlet property="splitLabel" destination="7Ih-Lp-hHp" id="8Py-Zu-RJ0"/>
+                        <outlet property="splitResultLabel" destination="L9v-bW-ulm" id="U8v-wU-uBH"/>
                         <outlet property="tipControl" destination="wwR-zu-BcH" id="3Bn-xb-BCW"/>
                         <outlet property="tipLabel" destination="BX6-N7-eyn" id="16t-0P-gxN"/>
                         <outlet property="tipPlus" destination="V2c-QC-P55" id="t6d-3r-Moo"/>
@@ -113,7 +146,7 @@
         <!--Navigation Controller-->
         <scene sceneID="viG-pU-JtK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NyJ-b7-4cd" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nc" automaticallyAdjustsScrollViewInsets="NO" id="NyJ-b7-4cd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ims-hK-cKl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
