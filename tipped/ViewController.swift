@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        billField.center.y += 100
+        billField.center.y += 490
         tipView.center.y += view.bounds.height
     }
     
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
 
     @IBAction func onEdit(_ sender: Any) {
         UIView.animate(withDuration: 0.8, animations: {
-            self.billField.center.y -= 100
-            self.tipView.center.y -= self.view.bounds.height
+            self.billField.center.y = 88
+            self.tipView.center.y = 400
         })
     }
     
