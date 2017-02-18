@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitLabel: UILabel!
     @IBOutlet weak var splitField: UITextField!
     @IBOutlet weak var splitResultLabel: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var totalField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onEdit(_ sender: Any) {
+    @IBAction func onEdit(_ sender: AnyObject) {
         UIView.animate(withDuration: 0.8, animations: {
             self.billField.center.y = 88
             self.tipView.center.y = 400
@@ -53,20 +56,66 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func disableMinus(x: Int) {
+        if x < 2 {
+            minusButton.isEnabled = false
+        } else {
+            minusButton.isEnabled = true
+        }
+    }
+    
+//    func calculateSplit() {
+//        let splitNumber = Double(splitField.text!) ?? 0
+//        let total = Double(totalLabel.text!) ?? 0
+//        let splitTotal = total / splitNumber
+//        splitResultLabel.text = String(format: "$%.2f", splitTotal)
+//        print(String(format: "$%.2f", total))
+//    }
+    
+    @IBAction func calculateSplit(_ sender: AnyObject) {
+        let splitNumber = Double(splitField.text!) ?? 0
+        print(splitNumber)
+        let total = Double(totalField.text!) ?? 0
+        print(total)
+        let splitTotal = total / splitNumber
+        splitResultLabel.text = String(format: "$%.2f", splitTotal)
+    }
+    
+    @IBAction func plusSplit(_ sender: AnyObject) {
+        let splitNumber = (Int(splitField.text!) ?? 0) + 1
+        splitField.text = String(format: "%d", splitNumber)
+        disableMinus(x: splitNumber)
+//        print(totalLabel.text ?? 0)
+//        print(splitField.text ?? 0)
+    }
+    
+    @IBAction func minusSplit(_ sender: AnyObject) {
+        let splitNumber = (Int(splitField.text!) ?? 0) - 1
+        splitField.text = String(format: "%d", splitNumber)
+        disableMinus(x: splitNumber)
+//        print(totalLabel.text ?? 0)
+//        print(splitField.text ?? 0)
+    }
+    
     @IBAction func calculateTip(_ sender: AnyObject) {
+        
+        // Calculate Tip
         
         let tipPercentages = [0.18, 0.2, 0.25]
         
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        let splitNumber = Double(splitField.text!) ?? 0
-        let splitTotal = total / splitNumber
-        
         
         tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
-        splitResultLabel.text = String(format: "$%.2f", splitTotal)
+        totalField.text = String(format: "$%.2f", total)
+        
+        // Calculate Split
+//        
+//        let splitNumber = Double(splitField.text!) ?? 0
+//        let splitTotal = total / splitNumber
+//        splitResultLabel.text = String(format: "$%.2f", splitTotal)
+
     }
     
 }
