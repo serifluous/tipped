@@ -62,23 +62,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="17" id="Gon-7Q-b1R">
-                                        <rect key="frame" x="200" y="231" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" id="Gon-7Q-b1R">
+                                        <rect key="frame" x="22" y="172" width="331" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="calculateSplit:" destination="BYZ-38-t0r" eventType="editingChanged" id="dfU-Vc-E8A"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ZQ-ZR-wd6">
-                                        <rect key="frame" x="22" y="172" width="331" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="48"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="1" placeholder="#" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" id="bOe-T8-JCi">
                                         <rect key="frame" x="159" y="268" width="39" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,9 +76,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="6yk-v5-QT7"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Split the bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ih-Lp-hHp">
                                         <rect key="frame" x="22" y="275" width="103" height="21"/>
@@ -110,8 +97,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="minus.png"/>
                                         <connections>
-                                            <action selector="calculateSplit:" destination="BYZ-38-t0r" eventType="touchDown" id="N56-jF-ADn"/>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchDown" id="Bv3-ex-ADP"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchDown" id="NRN-5C-olH"/>
                                             <action selector="minusSplit:" destination="BYZ-38-t0r" eventType="touchDown" id="t8C-eC-azf"/>
                                         </connections>
                                     </button>
@@ -120,7 +106,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="plus.png"/>
                                         <connections>
-                                            <action selector="calculateSplit:" destination="BYZ-38-t0r" eventType="touchDown" id="BuM-xU-MRb"/>
                                             <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchDown" id="zLZ-tr-kds"/>
                                             <action selector="plusSplit:" destination="BYZ-38-t0r" eventType="touchDown" id="Slc-yE-cNn"/>
                                         </connections>
@@ -163,7 +148,6 @@
                         <outlet property="tipView" destination="Ckm-qX-x8Y" id="uiZ-eO-krd"/>
                         <outlet property="totalBg" destination="hoy-3k-OfQ" id="G2c-EB-SdB"/>
                         <outlet property="totalField" destination="Gon-7Q-b1R" id="X9i-sO-SM2"/>
-                        <outlet property="totalLabel" destination="0ZQ-ZR-wd6" id="3V4-vi-Z4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

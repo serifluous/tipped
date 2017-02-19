@@ -4,7 +4,7 @@ tipped is a tip calculator application for iOS.
 
 Submitted by: Sarah Li
 
-Time spent: 7 hours spent in total
+Time spent: 8.5 hours spent in total
 
 ## User Stories
 
@@ -19,7 +19,8 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [x] Keeps font size of bill total constant when text overflows
-* [ ] Split bill (might have to use key-value observing)
+* [x] Split bill
+* [x] Hide split amount when "1" is selected
 * [x] App icon
 * [ ] Custom style UISegmentedControl (http://www.richardhsu.me/posts/2015/01/26/segmented-control.html)
 
@@ -38,7 +39,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 - Found a way to replace the font for UISegmentedControl (http://stackoverflow.com/questions/27940042/how-to-change-font-size-and-font-name-of-uisegmentedcontrol-programmatically-on) and also fiddled with AppDelegate (http://stackoverflow.com/questions/34559989/swift-application-didfinishlaunchingwithoptions-method)
 - Used a tutorial (https://www.raywenderlich.com/113674/ios-animation-tutorial-getting-started) for animations
 - Used Stack Overflow to figure out how to add app icons (http://stackoverflow.com/questions/28170520/ios-how-to-set-app-icon-and-launch-images)
-- At one point, I accidentally inserted a breakpoint and couldn't figure out why the Simulator was freezing
+- At one point, I accidentally inserted a breakpoint and couldn't figure out why the Simulator was freezing.
+- I spent a whole bunch of time trying to figure out how to create an event listener for UITextField to implement bill splitting and then realized I just had to create global variables for the number to split by and the total bill.
 
 
 ## License
